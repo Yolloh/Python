@@ -1,0 +1,174 @@
+Fortsätt tut 14
+/* Tutorial: HTML5 thenewboston   */
+/* RESET
+Glöm inte stjärnan!  ***
+*/
+
+*{
+margin: 0;
+padding: 0;
+border: 0;
+font-family: arial, sans-serif;
+font-size: 26;
+border-top: 10 px solid black;
+}
+
+/* (CENTRERA)       Obs inte fundamentalt
+Den är fortfarande centrerad även om jag tar bort denna!
+Även om man stoppar allt innehåll i en div, så bör man fortfarande center align body.
+För vissa äldre browsers supportar inte det annars.. Och då kommer det bli keff.
+Bucky gjorde detta i en separat style trots att han gjort en reset.
+Varför sätter man inte bara text algn i reseten?                                                                    ?   */
+body{
+    text-align: center;
+    background-color: white;
+    /* Bodyn för kort, testat               height: 100vh, 100%,  overflow: auto;  */
+}
+
+/* BIG WRAPPER - De övergripande inställningarna.
+BREDD
+Hemsidor bör vara någonstans mellan 950 - 1000 px bred. 1000 gör att det blir matematiskkt lätt att jobba med,
+när tex kolumner skall delas upp osv.
+För att justera detta, gör en div id typ container eller big_wrapper, med allt innehåll. width:1000px
+
+MARGIN
+Måste ändå sättas, trot att vi centerade bodyn... Men detta är hur man centerar text iaf.                           ?
+Mellan 10-20 är lagom på toppen. Höger och vänster är bra i auto.
+Och nedåt ger sig själv... Blir också bra i auto.
+
+CENTRERA:
+Är att sätta höger och vänster- marginalerna till auto
+*/
+#big_wrapper{
+    width: 1000px;
+    border: 1px solid white;
+    background-color: #f1d1ef;
+    margin: 20px auto 20px auto;            /* top right:auto bottom left:auto          CENTRERAR*/
+    text-align: left;
+}
+
+header{
+align: right;
+margin: 20 px;
+font-size: 250%;
+}
+
+/* RUBRIK  anne mehr
+Del av header
+*/
+#titel{
+    text-align: center;
+    background: #e7afe2;
+    border: 1px solid white;
+    padding; 20px;
+    font-family: Tahoma, sans-serif;
+    font-size: 200%;
+}
+
+/* NAV MENY
+Refererar till menu (som är en lista) i två olika omgångar. Först en generell, sedan en speciell target li
+Display: inline-block; gör att elementen hamnar eftervarandra, på rad istället. Är lämpligt för nav meny.
+Generell:
+för själva rutan - bakgrundsfärg, border
+Target li:
+font, list style, position
+*/
+#menu{
+    float: right;
+    text-align: center;
+    width: 42%;
+    border: 3px dotted white;
+    -webkit-border-radius: 25px;
+    margin-right: 40px;
+}
+#menu li{
+        display: inline-block;
+        list-style-type: none;
+        /* padding: 1px;          padding här = MELLAN varje ord          ?  */
+        font: bold 14px arial;
+        margin: 5px;
+        padding: 5px;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+}
+/* ARTICLE SECTION
+Skall vara till vänster på sidan.
+Begränsar bredden till 660 så att <aside> kan få plats till höger om denna sektion.
+OBS! glam ej ränka med marginalen vid total width. I detta fall 660 +30+30 = 720         280 kvar till aside.
+
+float: left
+Säger "ta upp så mkt plats elementet behöver och lägg mot vänster kant.
+Övrigt innehåll kommer display till höger eller nedanför".
+*/
+#art-section{
+    float: left;
+    width: 660px;
+    margin: 30px;
+    -webkit-transform:scale(1);
+
+
+}
+/* ARTIKLAR
+*/
+article{
+    background: #eceaec;
+    border: 2px solid white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+article h3{
+    font: bold 18px Tahoma;
+}
+article h2{
+    font: bold 25px Tahoma;
+}
+
+/* BILD */
+#bild{
+    height: 480px;
+    width: 480px;
+    margin: 10px;
+    float: center;
+    background-image:url(img/tower.jpg);
+}
+
+/* ASIDE
+Fortfarande float left.... Varför behövs det        ?
+Av någon anledning kan han ange margins för top och bottom så: 20px 0px. Blir inte top och right.
+Paddingen är för höger - vänster.
+aside[id="prize"]
+*/
+#prize{
+    float: left;
+    width: 220px;
+    margin: 20px 0px;
+    background: #e7afe2;
+    padding: 30px;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+/* FOOTER av article
+Vill försjuta den till höger - men inte hela vägen.*/
+article footer{
+    text-align: right;
+    padding-right: 25px;
+}
+
+#ord{
+    font: italic 20px Tahoma;                             /* italic funkar ej */
+    clear: both;
+    text-align: right;                                    /* Funkar ej att centera! */
+    padding: 30px;
+}
+
+#upside{
+float: right;
+    -webkit-transform:scale(-1.5,-1);
+}
+
+/* MISSTAG
+MYSTERIUM   varför den fortfarande är så bred.                              SVAR: Fel sorts kolon efter width          */
+/* Funkade ej nu                                                                         Fel filtyp på bild
+Fick ingen marginal för NAv rutan                                   Target var menu li istället för menu            */
