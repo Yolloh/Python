@@ -1,0 +1,89 @@
+*{
+margin: 0;
+padding: 0;
+border: 0;
+font-family: 'Muli', sans-serif;
+background-color: #E7E1DE;
+}
+
+#big_wrapper{
+    width: 1000px;
+    margin: 0px auto 20px auto;
+    text-align: left;
+
+}
+
+#title{
+    background-image: url("img/anne-art.jpeg");                         /* Image from https://www.pexels.com */
+    background-size: 120%;
+    opacity: 0.75;
+    text-align: center;
+    height: 400px;
+    border: 1px solid black;
+    padding-top; 50px;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 180pt;
+    color: white;
+}
+
+#menu{
+    float: right;
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin-top: 5px;
+}
+#menu li{
+        display: inline-block;
+        list-style-type: none;
+        margin-left: 55px;
+        font-size: 150%;
+        font-weight: bold;
+        margin-top: 10 px;
+        padding: 5px;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+}
+
+
+#art-section{
+    float: left;
+    width: 900px;
+    margin: 5px;
+}
+article{
+    padding: 20px;
+    margin-bottom: 25px;
+}
+article h3{                             /* Ändra / Förstora font storlekar */
+    font: bold 18px;
+}
+article h2{
+    font: bold 25px;
+}
+article footer{
+    text-align: left;
+    padding-right: 25px;
+    color: gray;
+}
+#next{
+height: 420 px;
+border-top: 1px solid white;
+}
+
+.image{
+   margin: 1px 5px;
+   float: left;
+   border: none;
+}
+#hands{
+    margin-top: 30px;
+}
+
+
+/* MISSTAG
+MYSTERIUM   varför den fortfarande är så bred.                              SVAR: Fel sorts kolon efter width          */
+/* Funkade ej nu                                                                         Fel filtyp på bild
+Fick ingen marginal för NAv rutan                                   Target var menu li istället för menu
+Konstigt: Satte bottod border på body. Men den hamnade preis nedanför headern......
+Footern också! Hamnar längst upp*/
