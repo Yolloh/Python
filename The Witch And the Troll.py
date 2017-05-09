@@ -30,12 +30,6 @@ def alvan():
     Nåväl, hon höll ett vakande öga på dig medans du sov ut i den blöta björnmossan.""")
     print("Din mat är", mat, ", Ditt liv är", liv)
 
-fiender = [alvan, troll, nacken]
-
-            # Den kör alla fiender functioner direkt! Bara att ha dem i dict verkar call...
-            # Mat och liv är alltid samma - borde ha dem i start func eller en karaktär.
-            # Kanske göra karaktären till ett dictionary? Liv : 3, Mat : 4, Slag : 8
-
 print(f"""Mellan stockar och stenar, mossor och bark
       en stig letar alltjämt sig fram
       Du kommer till en förgrening.
@@ -46,7 +40,7 @@ while liv >= 1:
   #      break
     direction = input("Höger, rakt eller vänster? ").lower()
 
-    if direction == "höger":                    # Funkar inte, "liv" ref before assigment
+    if direction == "höger":                   
         nacken()
     elif direction == "vänster":
         mat += 1
@@ -57,7 +51,7 @@ while liv >= 1:
         if hansdirection == "vänster":
             troll()
         else:
-            random.choice(fiender)      # LISTA av fiender(functions) Blir ej callade.... Kanske ändåå inte går.
+            # random.choice(fiender)      
     elif direction == "rakt":
         print("""Den här vägen verkar... ändlös.
         Bäst att fortsätta gå, och raska på innan mörkret kommer. Låt oss hoppas du klarar dig..""")
@@ -82,7 +76,7 @@ while liv >= 1:
                     break
             else:
                 print("Din mat är", mat, ", Ditt liv är", liv)
-                continue                                                # continue funkar! yaya! :)
+                continue                                               
         elif nomansland == "höger":
             print("""Du korsar en liten bäck, och sätter dig på en sten. Du ser att det växer lite bär och svampar
             längst stigen. Vill du plocka och äta dem?""")
