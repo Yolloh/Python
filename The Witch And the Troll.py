@@ -4,8 +4,8 @@ import time
 global liv
 global mat
 
-liv = 5
-mat = 4
+liv = 5  # liv = life
+mat = 4  # mat = food
 
 def troll():
     mat += 2
