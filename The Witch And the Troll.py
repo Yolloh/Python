@@ -1,6 +1,5 @@
 import random
 import time
-import random
 
 global liv
 global mat
