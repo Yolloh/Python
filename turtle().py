@@ -1,5 +1,7 @@
 import turtle
 
+# Here I have used the turtle method to draw some shapes
+
 def triangles():
     window = turtle.Screen()
     bo = turtle.Turtle()
