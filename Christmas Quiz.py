@@ -18,7 +18,7 @@ if a == "nej":
 
 print(" ")
 
-x2 = x1
+x2 = x1                                                     # Before every new question, the current point count gets updated
 a = input("2. Vem var julvärd förra året? Skriv bara förnamn. ")
 if a == "gina":
     x2 += 1
