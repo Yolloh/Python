@@ -1,3 +1,4 @@
+# Introduction and rules for the game
 print("Hej och välkommen till Paulines JULSTÄMNINGSMÄTARE! :)   ⛄")
 
 print(" ")
@@ -7,8 +8,8 @@ print("Du svarar genom att skiva ditt svar efter frågan. Använd bara små boks
 
 print(" ")
 print("Om du är redo för första frågan, tryck enter")
-input()
-x1 = 0
+input()                                                     # User press enter when they are ready to play
+x1 = 0                                                      # Current point is 0
 a = input("1. Har du frivilligt spelat någon julmusik i år? ")
 if a == "ja":
     x1 += 1
@@ -57,10 +58,10 @@ print(" ")
 x5 = x4
 while True:
     try:
-        a = int(input('5. Hur många avsnitt av årets julkalender har du sett? '))  # OBS int()
+        a = int(input('5. Hur många avsnitt av årets julkalender har du sett? '))  
         if a == 0 :
             x5 += 0
-        if a in range(1,6):                     # in range för att testa mot mult values
+        if a in range(1,6):                     # in range to test against multiple values
             x5 += 1
         if a in range(6,11):
             x5 += 2
@@ -72,7 +73,7 @@ while True:
             x5 += 0
         break
     except ValueError:
-        print("Använd siffror, inte bokstäver.")
+        print("Använd siffror, inte bokstäver.") # Asks user to input numbers, not letters
 
 
 print(" ")
@@ -131,8 +132,8 @@ if a == "ja":
 if a == "nej":
     x11 += 0
 
-print(" ")
-print(" ")
+print(" ")                               # In the section below the users points, stored in x11, gets evaluated
+print(" ")                               # Depending on how it went, the approperiate message and the ammount of points gets printed 
 print("DITT JULSTÄMNINGSBETYG:")
 print(" ")
 if x11 in range(0,6):
