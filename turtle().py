@@ -20,6 +20,7 @@ def triangles():
         bo.left(120)
         bo.forward(100)
     window.exitonclick()
+    
 triangles()
 
 
@@ -41,6 +42,7 @@ def circle():
         square(emma)
         emma.right(10)
     window.exitonclick()
+    
 circle()
 
 
@@ -64,8 +66,8 @@ def flower():
         leaf(b)
         b.right(60)
     b.end_fill()
-
     window.exitonclick()
+    
 flower()
 
 
